@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.811">
+    <testcase classname="As an administrator I want to be able to access courses categories via API connection." name="When a GET request is sent to the /api/categories endpoint with valid authorization," time="9.36">
+        <system-out><![CDATA[* The api user constructs the base url with the "admin" token...............passed
+* The api user sets "api/categories" path parameters........................passed
+* The api user sends a GET request and saves the returned response..........passed
+* The api user verifies that the status code is 200.........................passed
+* The api user verifies that the "remark" information in the response body is "success"..passed
+* The api user verifies the "Online-Education-871", "/store/1/default_images/categories_icons/code.png", 216, 326, 883, "en" and "Online Education" information of the item at 1 in the response body..passed
+]]></system-out>
+    </testcase>
+</testsuite>
