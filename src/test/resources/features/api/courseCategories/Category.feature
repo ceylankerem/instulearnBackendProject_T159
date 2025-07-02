@@ -23,7 +23,7 @@ Feature: As an administrator, I should be able to access the detailed informatio
       | id  | data_id | slug                 | icon                                              | order | translations_id | category_id | locale | title            |
       | 883 | 883     | Online-Education-871 | /store/1/default_images/categories_icons/code.png | 216   | 326             | 883         | en     | Online Education |
 
-  @API
+
   Scenario Outline: When a GET request is sent to the /api/category/{id} endpoint with valid authorization information
   and an id that does not have a record, it should be verified that the returned status code is 203, the remark
   information in the response body is "failed" and the message information is "There is not category for this id."
@@ -72,14 +72,15 @@ Feature: As an administrator, I should be able to access the detailed informatio
     # Api kullanicisi "invalid" token ile base urli olusturur
     * The api user sets "api/category/<id>" path parameters.
     # Api kullanicisi "api/category/<id>" path parametrelerini olusturur
-    * The api user sends a GET request and saves the returned response.
-    # Api kullanicisi GET request gonderir ve donen responsei kaydeder
-    * The api user verifies that the status code is 401.
-    # Api kullanicisi status codeun 401 oldugunu dogrular
-    * The api user verifies that the "message" information in the response body is "Unauthenticated.".
-    # Api kullanicisi response bodydeki message bilgisinin "Unauthenticated." oldugunu dogrular
 
-    #* The api user sends a GET request, saves the returned response, and verifies that the status code is '401' with the reason phrase Unauthorized.
+    #* The api user sends a GET request and saves the returned response.
+    ## Api kullanicisi GET request gonderir ve donen responsei kaydeder
+    #* The api user verifies that the status code is 401.
+    ## Api kullanicisi status codeun 401 oldugunu dogrular
+    #* The api user verifies that the "message" information in the response body is "Unauthenticated.".
+    ## Api kullanicisi response bodydeki message bilgisinin "Unauthenticated." oldugunu dogrular
+
+    * The api user sends a GET request, saves the returned response, and verifies that the status code is '401' with the reason phrase Unauthorized.
     # Api kullanicisi GET request gonderir, donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular
 
     Examples:

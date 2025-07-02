@@ -14,7 +14,7 @@ public class API_Methods {
     static Response response;
     public static int id;
 
-    public static void pathParam(String rawPaths) {  //    api/categories
+    public static void pathParam(String rawPaths) {  //    api/updateCategory/891
         String[] paths = rawPaths.split("/");  //  [api, categories]
 
         System.out.println(Arrays.toString(paths));  //  [api, categories]

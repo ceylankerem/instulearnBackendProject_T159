@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="8.51">
-    <testcase classname="As an administrator, I should be able to access the detailed information of the course category with" name="When a GET request is sent to the /api/category/{id} endpoint with valid authorization information" time="7.91">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="9.557">
+    <testcase classname="As an administrator, I want to be able to update the information of the course category with the" name="Verify that a PATCH request to /api/updateCategory/{id} with valid authorization and correct data" time="8.951">
         <system-out><![CDATA[* The api user constructs the base url with the "admin" token...............passed
-* The api user sets "api/category/25416" path parameters....................passed
-* The api user sends a GET request and saves the returned response..........passed
-* The api user verifies that the status code is 203.........................passed
-* The api user verifies that the "remark" information in the response body is "failed"..passed
-* The api user verifies that the "data.message" information in the response body is "There is not category for this id."..passed
+* The api user sets "api/updateCategory/891" path parameters................passed
+* The api user prepares a patch request body to send to the api updateCategory endpoint..passed
+* The api user sends a PATCH request and saves the returned response........passed
+* The api user verifies that the status code is 200.........................passed
+* The api user verifies that the "remark" information in the response body is "success"..passed
+* The api user verifies that the "Message" information in the response body is "Successfully Updated."..passed
+* The api user verifies that the "Updated Category Id" information in the response body is the same as the id path parameter in the endpoint..passed
 ]]></system-out>
     </testcase>
 </testsuite>

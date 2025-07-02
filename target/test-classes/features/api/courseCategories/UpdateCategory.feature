@@ -1,14 +1,14 @@
 Feature: As an administrator, I want to be able to update the information of the course category with the
   specified id number via API connection.
 
-
+  @API
   Scenario: Verify that a PATCH request to /api/updateCategory/{id} with valid authorization and correct data
   (title) returns status 200, remark “success”, message “Successfully Updated.”, and the Updated Category Id in the
   response matches the {id} path parameter.
 
     * The api user constructs the base url with the "admin" token.
     # Api kullanicisi "admin" token ile base urli olusturur
-    * The api user sets "api/updateCategory/886" path parameters.
+    * The api user sets "api/updateCategory/891" path parameters.
     # Api kullanicisi "api/updateCategory/id" path parametrelerini olusturur
     * The api user prepares a patch request body to send to the api updateCategory endpoint.
     # Api kullanicisi api updateCategory endpointine gondermek icin bir patch request body hazirlar

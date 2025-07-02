@@ -69,5 +69,5 @@ Feature: As an administrator, I want to be able to create a new course category 
 
     Examples:
       | id  |
-      | 886 |
+      | 890 |
 
