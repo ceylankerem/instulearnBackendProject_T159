@@ -1,5 +1,5 @@
 Feature: As an administrator I want to be able to access courses categories via API connection.
-  @API
+
   Scenario Outline: When a GET request is sent to the /api/categories endpoint with valid authorization,
   the response status code should be 200, the remark should be “success”, and the information of id(x)
   (slug, parent_id, icon, order, title, category_id, locale) should be validated.
@@ -30,15 +30,15 @@ Feature: As an administrator I want to be able to access courses categories via 
     # Api kullanicisi "invalid" token ile base urli olusturur
     * The api user sets "api/categories" path parameters.
     # Api kullanicisi "api/categories" path parametrelerini olusturur
-    * The api user sends a GET request and saves the returned response.
-    # Api kullanicisi GET request gonderir ve donen responsei kaydeder
-    * The api user verifies that the status code is 401.
-    # Api kullanicisi status codeun 401 oldugunu dogrular
-    * The api user verifies that the "message" information in the response body is "Unauthenticated.".
-    # Api kullanicisi response bodydeki message bilgisinin "Unauthenticated." oldugunu dogrular
 
+   #* The api user sends a GET request and saves the returned response.
+   ## Api kullanicisi GET request gonderir ve donen responsei kaydeder
+   #* The api user verifies that the status code is 401.
+   ## Api kullanicisi status codeun 401 oldugunu dogrular
+   #* The api user verifies that the "message" information in the response body is "Unauthenticated.".
+   ## Api kullanicisi response bodydeki message bilgisinin "Unauthenticated." oldugunu dogrular
 
-    #* The api user sends a GET request, saves the returned response, and verifies that the status code is '401' with the reason phrase Unauthorized.
+    * The api user sends a GET request, saves the returned response, and verifies that the status code is '401' with the reason phrase Unauthorized.
     # Api kullanicisi GET request gonderir, donen responsei kaydeder, status codeun '401' ve reason phrase bilgisinin Unauthorized oldugunu dogrular
 
 

@@ -23,7 +23,7 @@ Feature: As an administrator, I should be able to access the detailed informatio
       | id  | data_id | slug                 | icon                                              | order | translations_id | category_id | locale | title            |
       | 883 | 883     | Online-Education-871 | /store/1/default_images/categories_icons/code.png | 216   | 326             | 883         | en     | Online Education |
 
-
+  @API
   Scenario Outline: When a GET request is sent to the /api/category/{id} endpoint with valid authorization information
   and an id that does not have a record, it should be verified that the returned status code is 203, the remark
   information in the response body is "failed" and the message information is "There is not category for this id."
